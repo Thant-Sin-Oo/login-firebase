@@ -19,25 +19,25 @@
 
             <div class="form-element">
 
-                <div class="input-username">
+                <!-- <div class="input-username">
                     <input type="username" id="username" placeholder="Enter Username" required>
-                </div>
+                </div> -->
 
                 <div class="input-email">
                     <input type="email" id="email" placeholder="Enter Email">
                 </div>
 
                 <div class="input-password">
-                    <input type="password" id="password-field" placeholder="Enter Password">
-                    <!-- <span class="showBtn">SHOW</span> -->
+                    <input  type="password" id="password-field" placeholder="Enter Password">
+                    <span class="showBtn">SHOW</span>
                 </div>
             
                 <!-- <div class="indicator">
                     <span class="weak">1</span>
                     <span class="medium">2</span>
                     <span class="strong">3</span>
-                </div>
-                <div class="text">Your password is too weak</div> -->
+                </div> -->
+                <div class="text">Your password is too weak</div>
 
                 <div class="password-policies">
 
@@ -67,9 +67,9 @@
         
                 </div>
 
-                <div class="input-password">
+                <!-- <div class="input-password">
                     <input type="password" id="password_confirm" placeholder="Confirm Password">
-                </div>
+                </div> -->
 
                 
                 <div>
@@ -82,6 +82,30 @@
         </div>
 
     </div>
+
+    <!-- <script>
+        const text = document.querySelector(".text");
+        let numb = /[0-9]/
+        let chara = /[a-z]/
+        let upnumb = /[A-Z]/
+        let spechara = /[!,@,#,$,%,^,&,*,?,(,),_,+,-,=,~]/
+
+        
+            if(input.value.length <= 4 && (input.value.match(numb) || input.value.match(chara)) ){
+                text.textContent = "Your Password is too Weak"
+            }
+            else if (input.value.length <= 4 && (input.value.match(numb) || input.value.match(chara))){
+                text.textContent = "Your Password is medium"
+            }
+            else if (input.value.length <= 45 && (input.value.match(numb) || input.value.match(chara)) ){
+                text.textContent = "Your Password is strong"
+            }
+            else{
+                text.textContent = "incorre"
+            }
+        
+
+    </script> -->
 
     <script type="text/javascript">
         document.getElementById("login-btn").addEventListener("click",function(event){

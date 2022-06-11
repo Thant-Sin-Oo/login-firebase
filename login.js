@@ -18,13 +18,13 @@ const login = document.getElementById('login');
         update (ref(database,'users/' + user.uid),{
           last_login:dt,
         })
-        alert('User loged in')
+        alert('loged in Successful. Welcome')
         })
         .catch((error) => {
             const errorCode = error.code;
             const errorMessage = error.message;
             
-            alert(errorMessage);
+            alert('incorrect user name or password. Please try again');
         });
   })
 

@@ -61,11 +61,11 @@ body{
 	padding: 10px 30px;
 }
 
-.form .form-element .input-username{ 
+/* .form .form-element .input-username{ 
 	display: flex;
 	position: relative;
 	padding: 10px 30px;
-}
+} */
 
 .form .form-element .input-password .showBtn{
 	position: absolute;
@@ -74,7 +74,7 @@ body{
 	transform: translateY(-50%);
 	cursor: pointer;
 	font-size: 15px;
-	font-weight: 600;
+	font-weight: 500;
 }
 
 .form .form-element input:focus{
@@ -104,14 +104,15 @@ body{
 	box-sizing: border-box;
 	opacity: 1;
 	overflow: hidden;
-	
+	transition: height 300ms ease-in-out,
+				opacity 300ms ease-in-out;	
 	font-size: 10pt;
 }
 
 .form .form-element .password-policies.active {
 	opacity: 1;
 	padding: 10px;
-	height: 150px;
+	height: 180px;
 }
 
 .form .form-element .password-policies > div {
@@ -150,4 +151,11 @@ body{
 .btn-signup:hover{
 	background-color: aqua;
 	color: aliceblue;
+}
+
+.text{
+	font-size: 15px;
+	font-weight: 500;
+	display: none;
+	color: aqua;
 }

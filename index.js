@@ -9,13 +9,13 @@ const signup = document.getElementById('signup');
 signup.addEventListener('click', (e)=>{
     var email = document.getElementById('email').value;
     var password = document.getElementById('password-field').value;
-    var username = document.getElementById('username').value;
+    // var username = document.getElementById('username').value;
 
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         const user = userCredential.user;
         set(ref(database, 'users/' + user.uid), {
-          username: username,
+        //   username: username,
           email: email,
           password: password
         });
@@ -25,10 +25,11 @@ signup.addEventListener('click', (e)=>{
         const errorCode = error.code;
         const errorMessage = error.message;
         
-            alert(errorMessage);
+            alert('refill username or password');
 
         // console.log(errorMessage);
       });
+
   })
 
   //---//------------------------------------------------//
