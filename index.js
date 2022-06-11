@@ -1,3 +1,38 @@
+import fire from "/firebase.js";
+import {getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.8.3/firebase-auth.js";
+import {set, ref } from "https://www.gstatic.com/firebasejs/9.8.3/firebase-database.js";
+
+const { app, database, auth } = fire;
+
+const signup = document.getElementById('signup');
+
+signup.addEventListener('click', (e)=>{
+    var email = document.getElementById('email').value;
+    var password = document.getElementById('password-field').value;
+    var username = document.getElementById('username').value;
+
+    createUserWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        const user = userCredential.user;
+        set(ref(database, 'users/' + user.uid), {
+          username: username,
+          email: email,
+          password: password
+        });
+        alert('user created');
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        
+            alert(errorMessage);
+
+        // console.log(errorMessage);
+      });
+  })
+
+  //---//------------------------------------------------//
+
     // var pass = document.getElementById("password");
 	// var msg = document.getElementById("message");
 	// var str = document.getElementById("strength");
@@ -30,7 +65,7 @@
 	// })   
 //------------------------------------------------------------------------------------------------------//
 
-      function _id(name){
+    function _id(name){
         return document.getElementById(name);
     }
     function _class(name){
@@ -60,7 +95,7 @@
             _class("policy-number") .classList.remove("active");
         }
     
-        if (/[!,@,#,$,%,^,&,*]/.test(password)) {
+        if (/[!,@,#,$,%,^,&,*,~,?,(,)]/.test(password)) {
             _class("policy-special") .classList.add("active");
         }else{
             _class("policy-special") .classList.remove("active");
@@ -72,4 +107,3 @@
             _class("policy-length") .classList.remove("active");
         }    
     });
-        

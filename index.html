@@ -19,8 +19,8 @@
 
             <div class="form-element">
 
-                <div>
-                    <input type="username" id="username" placeholder="Enter Username">
+                <div class="input-username">
+                    <input type="username" id="username" placeholder="Enter Username" required>
                 </div>
 
                 <div class="input-email">
@@ -31,7 +31,7 @@
                     <input type="password" id="password-field" placeholder="Enter Password">
                     <!-- <span class="showBtn">SHOW</span> -->
                 </div>
-
+            
                 <!-- <div class="indicator">
                     <span class="weak">1</span>
                     <span class="medium">2</span>
@@ -40,6 +40,10 @@
                 <div class="text">Your password is too weak</div> -->
 
                 <div class="password-policies">
+
+                    <div>
+                        The password must contain:
+                    </div>
 
                     <div class="policy-length">
                         Contains 8 Characters
@@ -63,10 +67,14 @@
         
                 </div>
 
+                <div class="input-password">
+                    <input type="password" id="password_confirm" placeholder="Confirm Password">
+                </div>
+
                 
                 <div>
-                    <button id="signup">SignUp</button><br>
-                    <button id="login-btn">have account?</button>
+                    <button id="signup" class="btn-signup">Create New Account</button><br>
+                    <button id="login-btn" class="btn-login">have account? Login Here!</button>
                 </div>
 
             </div>                
