@@ -1,47 +1,77 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 <head>
-
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Login</title>
+    <title>Page Title</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='index.css'>
-   
+    <link rel='stylesheet' type='text/css' media='screen' href='form.css'>
 </head>
 <body>
-    
-    <div class="container">
-        <header>Login Page <br></header>
+    <form action="#">  
+    <div class="center-box2" id="register-div">
+        <h2>
+            Register
+        </h2>
+        <p>
+            Email
+        </p>
+        <input type="email" id="register-email" class="text-field1" name="register-email" placeholder="Email" required/>
+        <p> 
+            Password
+        </p>
+        <input onkeyup="trigger()" type="password" id="register-password" class="text-field1" name="register-password" placeholder="Password" required/>
+        
+        <div class="indicator">
+            <span class="weak"></span>
+            <span class="medium"></span>
+            <span class="strong"></span>
+         </div>
+        
+         <div class="text"></div>
 
-        <div class="form">
-            <div class="form-element">
+    </from>
+        
+         <div class="password-policies">
 
-                <div class="input-email">
-                    <input type="email" id="email" placeholder="Enter Email">
-                </div>
-
-                <div class="input-password">
-                    <input type="password" id="password-field" placeholder="Enter Password">
-                </div>
-                
-                <div>
-                    <button id="login" class="btn-login">Login</button><br>
-                    <button id="signup" class="btn-signup">Click here to create new account</button>
-                </div>
-
+            <div>
+                Strong password must contain:
             </div>
+
+            <div class="policy-length">
+                Contains 8 Characters
+            </div>
+
+            <div class="policy-number">
+                Contains One Number
+            </div>
+
+            <div class="policy-uppercase">
+                Contain One Uppercase
+            </div>
+
+            <div class="policy-special">
+                Contain One Special Characters
+            </div>
+
         </div>
 
+        <p> 
+            Confirm Password
+        </p>
+
+        <input type="password" id="register-password" class="text-field1" name="cregister-password" placeholder="Confirm Password" required/>
+        <button id="register-btn" class="btn-style">
+            Register
+        </button><br><br>
+
+        <button id="log-btn" class="an-btn">
+            Have an account? <b>LOGIN</b>
+        </button>
     </div>
 
-    <script type="text/javascript">
-        document.getElementById("signup").addEventListener("click",function(event){
-            location.href="/index.html"
-        })
-    </script>
-
-    <script type="module" src="login.js"></script>
-
+    
+    
+    <script type="module" src="form.js"></script>
 </body>
-</html>
+</html> -->

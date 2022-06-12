@@ -1,0 +1,102 @@
+<html lang="en">
+    <head>
+        <title></title>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="form.css">
+        
+    </head>
+    
+    <body>
+        <div class="center-box" id="login-div">
+            <h2>
+                Login
+            </h2>
+            <p>
+                Email
+            </p>
+            <input type="email" id="login-email" class="text-field" name="login-email" placeholder="Email" required/>
+            <p>
+                Password
+            </p>
+            <input type="password" id="login-password" class="text-field" name="login-password" placeholder="Password" required/>
+            <button id="login-btn" class="btn-style">
+                Login
+            </button><br><br>
+            <button id="reg-btn" class="an-btn">
+                Don't have an account? <b>REGISTER</b>
+            </button>
+        </div>
+
+        <div class="center-box2" id="register-div">
+            <h2>
+                Register
+            </h2>
+            <p>
+                Email
+            </p>
+            <input type="email" id="register-email" class="text-field1" name="register-email" placeholder="Email" required/>
+            <p> 
+                Password
+            </p>
+
+            <input type="password" id="register-password" class="text-field1" name="register-password" placeholder="Password" required/>
+                   
+             <div class="password-policies">
+
+                <div class="indicator">
+                    <span class="weak"></span>
+                    <span class="medium"></span>
+                    <span class="strong"></span>
+                 </div>
+                 
+                 <div class="text"></div>
+
+                <div>
+                    Strong password must contain:
+                </div>
+
+                <div class="policy-length">
+                    Contains 8 Characters
+                </div>
+    
+                <div class="policy-number">
+                    Contains One Number
+                </div>
+    
+                <div class="policy-uppercase">
+                    Contain One Uppercase
+                </div>
+    
+                <div class="policy-special">
+                    Contain One Special Characters
+                </div>
+    
+            </div>
+
+            <p> 
+                Confirm Password
+            </p>
+
+            <input type="password" id="cregister-password" class="text-field1" name="cregister-password" placeholder="Confirm Password" required/>
+
+            <button id="register-btn" class="btn-style">
+                Register
+            </button><br><br>
+
+            <button id="log-btn" class="an-btn">
+                Have an account? <b>LOGIN</b>
+            </button>
+        </div>
+
+        <div id="result-box">
+            <h3 id="result"></h3><br>
+            <button id="log-out-btn" class="btn-style">
+                LOGOUT
+            </button>
+        </div>
+
+        <script type="module" src="form.js"></script>
+    </body>
+</html>
